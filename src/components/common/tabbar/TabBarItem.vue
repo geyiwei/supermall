@@ -10,7 +10,6 @@
     <div v-else>
       <slot name="item-icon-active"></slot>
     </div>
-<!--    <div :class="{baractive:isActive}">-->
     <div :style="activeStyle">
       <slot  name="item-text"></slot>
     </div>
@@ -44,6 +43,7 @@ export default {
   watch: {},
   methods: {
     itemClick(){
+      console.log('46行=====>',this.$route.path);
       this.$router.replace(this.path)
     }
   },
